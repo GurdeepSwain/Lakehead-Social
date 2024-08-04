@@ -12,6 +12,18 @@
         android:hint="What's on your mind?" />
 
     <Button
+        android:id="@+id/addImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Image" />
+
+    <Button
+        android:id="@+id/addVideoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Video" />
+
+    <Button
         android:id="@+id/postButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
