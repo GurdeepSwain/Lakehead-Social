@@ -27,7 +27,8 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".PostActivity" />
-
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ProfileActivity" />
         <service android:name=".NotificationService" />
     </application>
 

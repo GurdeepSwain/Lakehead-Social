@@ -2,15 +2,12 @@ package com.lakehead.lakeheadsocial
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -52,9 +49,24 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val logoutButton = findViewById<Button>(R.id.logoutButton)
-        logoutButton.setOnClickListener {
-            logoutUser()
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    // Already on Home, no need to do anything
+                    true
+                }
+                R.id.navigation_profile -> {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.navigation_logout -> {
+                    logoutUser()
+                    true
+                }
+                else -> false
+            }
         }
     }
 
@@ -79,7 +91,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 .addOnFailureListener { exception ->
                     Toast.makeText(this, "Error getting posts: ${exception.message}", Toast.LENGTH_SHORT).show()
-                    Log.e("MainActivity", "Error getting posts: ${exception.message}")
                 }
         }
     }
