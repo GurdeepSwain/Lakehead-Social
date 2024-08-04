@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lakehead Social</string>
+
+        <string name="login">Login</string>
+        <string name="register">Register</string>
+        <string name="new_post">New Post</string>
+        <string name="post">Post</string>
+
+</resources>
