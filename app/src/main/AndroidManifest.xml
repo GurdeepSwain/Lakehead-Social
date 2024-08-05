@@ -14,25 +14,25 @@
         <!-- Your activities and services -->
 
 
-    <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+
+        <activity android:name=".IntroActivity"
+            android:exported="true">>
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".PostActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".FriendsActivity" />
         <activity android:name=".FollowingActivity" />
         <service android:name=".NotificationService" />
+
     </application>
 
 </manifest>

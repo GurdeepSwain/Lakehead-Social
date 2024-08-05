@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -32,7 +33,7 @@ class MainActivity : BaseActivity() {
 
         loadPosts()
 
-        val newPostButton = findViewById<Button>(R.id.newPostButton)
+        val newPostButton = findViewById<FloatingActionButton>(R.id.newPostButton)
         newPostButton.setOnClickListener {
             startActivity(Intent(this, PostActivity::class.java))
         }

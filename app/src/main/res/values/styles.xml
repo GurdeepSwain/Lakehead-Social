@@ -2,9 +2,51 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="IntroButton">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:buttonCornerRadius">50dp</item>
+    </style>
+
+    <style name="LoginButton">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:buttonCornerRadius">50dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="LoginEditText">
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/whiteHint</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="RegisterEditText" parent="LoginEditText"/>
+
+    <style name="RegisterButton">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:buttonCornerRadius">50dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>
