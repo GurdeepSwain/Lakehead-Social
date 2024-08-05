@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class UserAdapter(private val userList: List<User>, private val currentUser: User) :
@@ -35,15 +35,20 @@ class UserAdapter(private val userList: List<User>, private val currentUser: Use
 
         holder.followButton.setOnClickListener {
             val db = FirebaseFirestore.getInstance()
+            val userDocRef = db.collection("users").document(user.uid)
+            val currentUserDocRef = db.collection("users").document(currentUser.uid)
+
             if (currentUser.following.contains(user.uid)) {
                 // Unfollow the user
                 currentUser.following.remove(user.uid)
-                db.collection("users").document(currentUser.uid).update("following", currentUser.following)
+                currentUserDocRef.update("following", currentUser.following)
+                userDocRef.update("followers", FieldValue.arrayRemove(currentUser.uid))
                 holder.followButton.text = "Follow"
             } else {
                 // Follow the user
                 currentUser.following.add(user.uid)
-                db.collection("users").document(currentUser.uid).update("following", currentUser.following)
+                currentUserDocRef.update("following", currentUser.following)
+                userDocRef.update("followers", FieldValue.arrayUnion(currentUser.uid))
                 holder.followButton.text = "Unfollow"
             }
         }

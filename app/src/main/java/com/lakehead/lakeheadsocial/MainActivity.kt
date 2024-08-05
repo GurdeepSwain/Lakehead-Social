@@ -4,14 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
@@ -20,18 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        layoutInflater.inflate(R.layout.activity_main_content, findViewById(R.id.container))
 
         auth = FirebaseAuth.getInstance()
-
-        // Check if user is logged in
-        if (auth.currentUser == null) {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-            return
-        }
-
         db = FirebaseFirestore.getInstance()
 
         postList = mutableListOf()
@@ -45,39 +34,10 @@ class MainActivity : AppCompatActivity() {
 
         val newPostButton = findViewById<Button>(R.id.newPostButton)
         newPostButton.setOnClickListener {
-            val intent = Intent(this, PostActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, PostActivity::class.java))
         }
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_home -> {
-                    // Already on Home, no need to do anything
-                    true
-                }
-                R.id.navigation_profile -> {
-                    val intent = Intent(this, ProfileActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.navigation_friends -> {
-                    val intent = Intent(this, FriendsActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.navigation_following -> {
-                    val intent = Intent(this, FollowingActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.navigation_logout -> {
-                    logoutUser()
-                    true
-                }
-                else -> false
-            }
-        }
+
     }
 
     override fun onResume() {
@@ -103,12 +63,5 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Error getting posts: ${exception.message}", Toast.LENGTH_SHORT).show()
                 }
         }
-    }
-
-    private fun logoutUser() {
-        auth.signOut()
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 }
