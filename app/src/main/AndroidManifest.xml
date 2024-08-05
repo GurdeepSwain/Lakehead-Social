@@ -29,6 +29,8 @@
         <activity android:name=".PostActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".FriendsActivity" />
+        <activity android:name=".FollowingActivity" />
         <service android:name=".NotificationService" />
     </application>
 

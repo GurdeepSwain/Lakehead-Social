@@ -61,6 +61,16 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.navigation_friends -> {
+                    val intent = Intent(this, FriendsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.navigation_following -> {
+                    val intent = Intent(this, FollowingActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
                 R.id.navigation_logout -> {
                     logoutUser()
                     true

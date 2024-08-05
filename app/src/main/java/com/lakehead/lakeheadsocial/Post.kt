@@ -1,8 +1,12 @@
 package com.lakehead.lakeheadsocial
 
+import com.google.firebase.Timestamp
+
 data class Post(
-    val text: String = "",
+    val id: String = "",
     val userId: String = "",
-    val type: String = "text", // "text", "image", or "video"
-    val mediaUrl: String? = null // URL for image or video
+    val userName: String = "",
+    val text: String = "",
+    val imageUrl: String? = null,
+    val timestamp: Timestamp? = null
 )
