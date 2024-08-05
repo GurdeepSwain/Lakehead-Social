@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".IntroActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Welcome to Lakehead Social"
+        android:textSize="32sp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black" />
+
+    <TextView
+        android:id="@+id/introTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Connect with friends and the world around you on Lakehead Social."
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/IntroButton"
+        android:layout_below="@id/introTextView"
+        android:layout_marginTop="60dp"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/registerButton"
+        style="@style/IntroButton"
+        android:layout_below="@id/loginButton"
+        android:layout_marginTop="20dp"
+        android:text="Register" />
+</RelativeLayout>

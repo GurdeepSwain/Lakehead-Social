@@ -58,7 +58,7 @@ abstract class BaseActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
             }
             R.id.navigation_logout -> {
                 FirebaseAuth.getInstance().signOut()
-                startActivity(Intent(this, LoginActivity::class.java))
+                startActivity(Intent(this, IntroActivity::class.java))
                 finish()
                 return true
             }
