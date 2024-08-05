@@ -6,5 +6,6 @@ data class User(
     val email: String = "",
     val bio: String = "",
     val profilePictureUrl: String? = null,
+    val followers: MutableList<String> = mutableListOf(),
     val following: MutableList<String> = mutableListOf()
 )
