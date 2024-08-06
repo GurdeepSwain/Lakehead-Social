@@ -13,14 +13,16 @@ Lakehead Social is a social media application designed to connect users by allow
 
 ## Screenshots
 
-  <img width="300" alt="image" src="https://github.com/user-attachments/assets/20386e30-fb84-4df1-914e-d0d2035151d6">
-  <img width="300" alt="image" src="https://github.com/user-attachments/assets/e21a2813-234f-405d-8e12-9ec297727686">
-  <img width="300" alt="image" src="https://github.com/user-attachments/assets/043223d5-4e4f-4c60-9f02-1e8a52888db0">
-<!-- ![Profile Screen](https://github.com/user-attachments/assets/20386e30-fb84-4df1-914e-d0d2035151d6)
-![Home Screen](screenshots/home_screen.png)
-![Friends Screen](screenshots/friends_screen.png)
-![Following Screen](screenshots/following_screen.png)
- -->
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/20386e30-fb84-4df1-914e-d0d2035151d6">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/e21a2813-234f-405d-8e12-9ec297727686">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/043223d5-4e4f-4c60-9f02-1e8a52888db0">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/fab7f674-e471-4fe1-b161-25b46851ccfe">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/e971c30c-3f3c-46df-a078-260710f9a131">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/fe9541bf-7189-4cb9-9e31-24340e1be0c1">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/6b745d22-cc64-441d-b050-42c3ac9994a5">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/b391d4a2-5c4a-40a3-928d-237b6733df60">
+  <img width="290" alt="image" src="https://github.com/user-attachments/assets/6f8b6fc2-0466-41a1-b359-aae4db926a5e">
+
 
  
 ## Installation
